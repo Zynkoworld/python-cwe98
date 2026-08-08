@@ -1,0 +1,9 @@
+{"code": "from flask import request\nimport importlib\ndef h():\n    return importlib.import_module(request.args.get('m'))\n", "file": "v1_importlib_args.py", "id": "v1_importlib_args_L4", "label": "FLAG", "line": 4, "spurious": false}
+{"code": "from flask import request\ndef h():\n    return __import__(request.form['m'])\n", "file": "v2_dunder_import_form.py", "id": "v2_dunder_import_form_L3", "label": "FLAG", "line": 3, "spurious": false}
+{"code": "from importlib import import_module\ndef h():\n    return import_module(input())\n", "file": "v3_import_module_input.py", "id": "v3_import_module_input_L3", "label": "FLAG", "line": 3, "spurious": false}
+{"code": "from flask import request\nimport importlib\ndef h():\n    return importlib.import_module(request.values['mod'])\n", "file": "v4_importlib_values.py", "id": "v4_importlib_values_L4", "label": "FLAG", "line": 4, "spurious": false}
+{"code": "def h(request):\n    return __import__(request.GET['m'])\n", "file": "v5_dunder_get.py", "id": "v5_dunder_get_L2", "label": "FLAG", "line": 2, "spurious": false}
+{"code": "import importlib\ndef h():\n    return importlib.import_module('os')\n", "file": "s1_importlib_constant.py", "id": "s1_importlib_constant_L3", "label": "SAFE", "line": 3, "spurious": false}
+{"code": "from importlib import import_module\ndef h():\n    return import_module('json')\n", "file": "s2_import_module_constant.py", "id": "s2_import_module_constant_L3", "label": "SAFE", "line": 3, "spurious": false}
+{"code": "from flask import request\nimport importlib\ndef h():\n    return importlib.import_module(validate_module(request.args.get('m')))\n", "file": "s5_validate_module.py", "id": "s5_validate_module_L4", "label": "SAFE", "line": 4, "spurious": false}
+{"code": "from flask import request\ndef h():\n    return request.args.get('m')\n", "file": "s6_request_return_nosink.py", "id": "s6_request_return_nosink_L3", "label": "SAFE", "line": 3, "spurious": false}

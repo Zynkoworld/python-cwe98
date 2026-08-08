@@ -1,0 +1,5 @@
+Apache License 2.0
+
+Copyright (c) Concorde. Licensed under the Apache License, Version 2.0.
+The vendored engine (oracle/engine/) is concorde's own code. The probes are derived from the
+cuda GPU-lane taint corpus, semgrep-taint-mode adjudicated (external, independent ground truth).
